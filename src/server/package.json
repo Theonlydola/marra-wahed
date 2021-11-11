@@ -8,6 +8,9 @@
   "keywords": [],
   "author": "theonlydola",
   "license": "ISC",
+  "engines": {
+    "node": "14.17.0"
+  },
   "description": "Arabic Joke Generator.",
   "dependencies": {
     "cookie-parser": "^1.4.5",
