@@ -12,9 +12,7 @@ export default function Joke(props) {
         const response = await connect.getJoke(props.nsfwflag);
         if(!response){
             console.log("something went wrong!");
-            return;
         }
-        
         setrandomJoke(response);
     }catch(err){
         console.log(err);
