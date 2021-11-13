@@ -37,18 +37,18 @@ export default function JokeForm (props){
             <VStack>
               <FormControl id="name" isRequired>
                 <HStack spacing="1em">
-                <Input textAlign="right" value={name} fontFamily="DG bebo" placeholder="مثال: محمد لوبيا" onChange={(e) => setName(e.target.value)}/>
-                <FormLabel fontFamily="DG bebo">اسمك</FormLabel>
+                <Input textAlign="right" value={name} className="font-link" placeholder="مثال: محمد لوبيا" onChange={(e) => setName(e.target.value)}/>
+                <FormLabel className="font-link">اسمك</FormLabel>
                 </HStack>
               </FormControl>
               <FormControl id="joke" isRequired>
                 <HStack spacing="1em"> 
-                <Textarea textAlign="right" value={joke} fontFamily="DG bebo" align="right"placeholder="حاول تكون جديدة" onChange={(e) => setJoke(e.target.value)}/>
-                <FormLabel fontFamily="DG bebo">نكتة</FormLabel>
+                <Textarea textAlign="right" value={joke} className="font-link" align="right"placeholder="حاول تكون جديدة" onChange={(e) => setJoke(e.target.value)}/>
+                <FormLabel className="font-link">نكتة</FormLabel>
                 </HStack>
               </FormControl>
-            <Checkbox checked={nsfw} fontFamily="DG bebo" fontSize="120%" color="black" onChange={(e) => setnsfw(e.target.checked)}>Nsfw</Checkbox>
-            <Button w="10em" h="4em" boxShadow="5px 5px #F6D167" onClick={handleClick} backgroundColor="#FFF7AE" overflowWrap="break-word" hyphens= "auto" fontFamily="DG bebo" fontSize="120%" color="black" > ابعت</Button>
+            <Checkbox checked={nsfw} className="font-link" fontSize="120%" color="black" onChange={(e) => setnsfw(e.target.checked)}>Nsfw</Checkbox>
+            <Button w="10em" h="4em" boxShadow="5px 5px #F6D167" onClick={handleClick} backgroundColor="#FFF7AE" overflowWrap="break-word" hyphens= "auto" className="font-link" fontSize="120%" color="black" > ابعت</Button>
             </VStack>
           </Box>
         </Box>

@@ -98,7 +98,7 @@ import React, {useState, useEffect} from "react";
           <Icon as={ImQuotesRight} ml = "85%" mt="1em" />
           <Box mt="1em" mr="2em" ml="2em">
           {props.joke ? 
-          <Text overflowWrap="break-word" hyphens= "auto" fontFamily="DG bebo" fontSize="120%" color="black" > {props.joke.joke}</Text>
+          <Text overflowWrap="break-word" hyphens= "auto" className="font-link" fontSize="120%" color="black" > {props.joke.joke}</Text>
            : <Spinner color="red.500" /> }
           </Box> 
           <Icon as={ImQuotesLeft} mr = "85%" mt="1em"/>
@@ -111,12 +111,12 @@ import React, {useState, useEffect} from "react";
     
       <HStack ml="2em" mr="1em" mt="1em" spacing="24px">
           <IconButton title="كمان واحدة" icon={<IoReload />} borderRadius="full" bg="#DF2E2E" color="white" size="lg" onClick={handlereload}/>
-          <IconButton id="dislike" title="وحشة" icon={<BsEgg />} borderRadius="full" style= {{backgroundColor : dislikeStatus ? "#DF2E2E" : "grey"}} color="white" size="lg" outline="none" onClick={handleDislike}/>
-          <IconButton id= "like" title="جامدة" icon={<BsHeart />} borderRadius="full" style= {{backgroundColor : likeStatus ? "#DF2E2E" : "grey"}} color="white" size="lg" outline="none" onClick={handleLike}/>
+          <IconButton isDisabled={!props.joke} id="dislike" title="وحشة" icon={<BsEgg />} borderRadius="full" style= {{backgroundColor : dislikeStatus ? "#DF2E2E" : "grey"}} color="white" size="lg" outline="none" onClick={handleDislike}/>
+          <IconButton isDisabled={!props.joke} id= "like" title="جامدة" icon={<BsHeart />} borderRadius="full" style= {{backgroundColor : likeStatus ? "#DF2E2E" : "grey"}} color="white" size="lg" outline="none" onClick={handleLike}/>
       </HStack>
    
     </VStack>
-    <Button  mt="2em" bgColor="#DF2E2E" color="white" onClick={onOpen}>Report</Button>
+    <Button isDisabled={!props.joke}  mt="2em" bgColor="#DF2E2E" color="white" onClick={onOpen}>Report</Button>
     <Modal
         initialFocusRef={initialRef}
         isOpen={isOpen}

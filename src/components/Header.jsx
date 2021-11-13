@@ -9,7 +9,7 @@ export default function Header() {
     <HStack mr="2em" ml="2em" align="center" spacing="24px"> 
     <HStack mt="4em" w="65em"></HStack>
     {/* <Link fontFamily="DG bebo" href="" fontSize="1.5em" color="white">عننا</Link> */}
-    <Link fontFamily="DG bebo" fontSize="1.5em" color="white" href="/tellAjoke"> قولنا نكتة</Link>
+    <Link className="font-link" fontSize="1.5em" color="white" href="/tellAjoke"> قولنا نكتة</Link>
     </HStack>
     <VStack h="1em" ml="2em"> </VStack> 
     <Image ml="2em" h="auto" w="30%" src={logo} imagealt="مرة واحد" onClick={handlelogoClick}/> 
