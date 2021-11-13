@@ -1,5 +1,5 @@
 import { Box, Text, HStack, VStack, Button, Badge, Icon, IconButton} from '@chakra-ui/react';
-import {useDisclosure, FormControl, FormLabel, Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,ModalCloseButton} from "@chakra-ui/react"
+import {Spinner, useDisclosure, FormControl, FormLabel, Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,ModalCloseButton} from "@chakra-ui/react"
 import { BsHeart, BsEgg } from "react-icons/bs"
 import { IoReload } from "react-icons/io5";
 import { ImQuotesRight, ImQuotesLeft } from "react-icons/im";
@@ -91,13 +91,15 @@ import React, {useState, useEffect} from "react";
         setdislikescount(props.joke.dislikes)
     }, [props.joke]);
 
-    return <Box align="center"> 
+    return <Box mt="3em" align="center"> 
   <VStack spacing="2em" mt="1em">
     <Box height="auto" width="100%" borderRadius="lg" backgroundColor="#FFF7AE" align="center" boxShadow="10px 10px #F6D167">
           {props.joke.nsfw&& <Badge colorScheme="red">NSFW</Badge>} 
           <Icon as={ImQuotesRight} ml = "85%" mt="1em" />
           <Box mt="1em" mr="2em" ml="2em">
+          {props.joke ? 
           <Text overflowWrap="break-word" hyphens= "auto" fontFamily="DG bebo" fontSize="120%" color="black" > {props.joke.joke}</Text>
+           : <Spinner color="red.500" /> }
           </Box> 
           <Icon as={ImQuotesLeft} mr = "85%" mt="1em"/>
           <HStack mb="1em"> 

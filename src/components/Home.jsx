@@ -16,8 +16,8 @@ export default function Home (props){
       <Box w="50%" align="center">
       <Icon as={CgDanger} w="6em" h="auto" color="#DF2E2E"/>
       <Icon as={ImQuotesRight} ml = "85%"/>
-      <Box mr="2em" ml="2em" w="25em">
-      <Text overflowWrap="break-word" hyphens= "auto" fontFamily="DG bebo" fontSize="120%" color="black" > كل النكت الموجودة على الموقع لا تعكس أي توجهات و غير مقصود بيها أي إساءة لأى طوائف أو أصحاب مهن و الهدف الوحيد هو تحقيق الضحك </Text>
+      <Box align="center" w="100%">
+      <Text textAlign="center" overflowWrap="break-word" hyphens= "auto" fontFamily="DG bebo" fontSize="100%" color="black" > كل النكت الموجودة على الموقع لا تعكس أي توجهات و غير مقصود بيها أي إساءة لأى طوائف أو أصحاب مهن و الهدف الوحيد هو تحقيق الضحك </Text>
       </Box>
       <Icon as={ImQuotesLeft} mr = "85%"/>
       <VStack spacing="3"> 
