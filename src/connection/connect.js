@@ -1,8 +1,9 @@
 import axios from 'axios';
-
+axios.defaults.baseURL = process.env.APP_URL || `https://peaceful-plateau-96606.herokuapp.com`
 class connect {
     async getJoke(nsfwflag){
         const response = await axios.get(`/${nsfwflag}/joke`, {flag: nsfwflag});
+        
         return response.data;
     }
 

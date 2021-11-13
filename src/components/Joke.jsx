@@ -11,8 +11,9 @@ export default function Joke(props) {
         console.log(props.nsfwflag);
         const response = await connect.getJoke(props.nsfwflag);
         if(!response){
-            console.log("something went wrong!");
+            console.log("something went so wrong!");
         }
+        console.log(response.joke);
         setrandomJoke(response);
     }catch(err){
         console.log(err);
@@ -21,7 +22,7 @@ export default function Joke(props) {
 
 useEffect(() => {
   fetchJoke();
-},[]);
+}, []);
 
   return <ChakraProvider>
   <Box w="100%" bg="white.200">

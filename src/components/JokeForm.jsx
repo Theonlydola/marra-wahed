@@ -2,7 +2,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import React, {useState} from "react";
 import connect from '../connection/connect';
 import {FormControl, FormLabel, Input, Textarea , HStack} from "@chakra-ui/react"
-import { Box, Text,Button,Checkbox, VStack} from '@chakra-ui/react';
+import { Box,Button,Checkbox, VStack} from '@chakra-ui/react';
 export default function JokeForm (props){
     const [name, setname] = useState('');
     const [joke, setjoke] = useState('');
@@ -18,7 +18,7 @@ export default function JokeForm (props){
 
     const handleClick = () => {
         console.log(name,joke,nsfw);
-        if(name != '' && joke != ''){
+        if(name !== '' && joke !== ''){
           connect.sendJoke(name,joke,nsfw);
           setname('');
           setjoke('');

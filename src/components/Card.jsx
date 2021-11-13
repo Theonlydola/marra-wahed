@@ -3,7 +3,6 @@ import {useDisclosure, FormControl, FormLabel, Input, Modal, ModalOverlay, Modal
 import { BsHeart, BsEgg } from "react-icons/bs"
 import { IoReload } from "react-icons/io5";
 import { ImQuotesRight, ImQuotesLeft } from "react-icons/im";
-import { MdOutlineReportGmailerrorred } from "react-icons/md";
 import connect from '../connection/connect';
 import React, {useState, useEffect} from "react";
   export default function Card(props) {
@@ -97,10 +96,9 @@ import React, {useState, useEffect} from "react";
     <Box height="auto" width="100%" borderRadius="lg" backgroundColor="#FFF7AE" align="center" boxShadow="10px 10px #F6D167">
           {props.joke.nsfw&& <Badge colorScheme="red">NSFW</Badge>} 
           <Icon as={ImQuotesRight} ml = "85%" mt="1em" />
-          {props.joke.joke?
           <Box mt="1em" mr="2em" ml="2em">
           <Text overflowWrap="break-word" hyphens= "auto" fontFamily="DG bebo" fontSize="120%" color="black" > {props.joke.joke}</Text>
-          </Box> : <Text overflowWrap="break-word" hyphens= "auto" fontFamily="DG bebo" fontSize="120%" color="black" > loading... </Text>}
+          </Box> 
           <Icon as={ImQuotesLeft} mr = "85%" mt="1em"/>
           <HStack mb="1em"> 
           <Text ml = "70%" mr="1em"> <Icon as={BsEgg}  /> {dislikescount} </Text>
