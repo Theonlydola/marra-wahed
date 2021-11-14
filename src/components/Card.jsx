@@ -91,7 +91,7 @@ import React, {useState, useEffect} from "react";
         setdislikescount(props.joke.dislikes)
     }, [props.joke]);
 
-    return <Box mt="3em" align="center"> 
+    return <Box mt="2em" align="center"> 
   <VStack spacing="2em" mt="1em">
     <Box height="auto" width="100%" borderRadius="lg" backgroundColor="#FFF7AE" align="center" boxShadow="10px 10px #F6D167">
           {props.joke.nsfw&& <Badge colorScheme="red">NSFW</Badge>} 
@@ -102,6 +102,7 @@ import React, {useState, useEffect} from "react";
            : <Spinner color="red.500" /> }
           </Box> 
           <Icon as={ImQuotesLeft} mr = "85%" mt="1em"/>
+          {props.joke.author&& <Badge ml="1.2em" mr = "85%" mt="0.2em" className="font-link" fontSize="105%" colorScheme="green">{props.joke.author}</Badge>} 
           <HStack mb="1em"> 
           <Text ml = "70%" mr="1em"> <Icon as={BsEgg}  /> {dislikescount} </Text>
           <Text  ml = "70%"> <Icon as={BsHeart}   /> {likescount} </Text>
