@@ -103,6 +103,7 @@ import React, {useState, useEffect} from "react";
           </Box> 
           <Icon as={ImQuotesLeft} mr = "85%" mt="1em"/>
           {props.joke.author&& <Badge ml="1.2em" mr = "85%" mt="0.2em" className="font-link" fontSize="105%" colorScheme="green">{props.joke.author}</Badge>} 
+          {props.joke.name&& <Badge ml="1.2em" mr = "85%" mt="0.2em" className="font-link" fontSize="105%" colorScheme="green">{props.joke.name}</Badge>} 
           <HStack mb="1em"> 
           <Text ml = "70%" mr="1em"> <Icon as={BsEgg}  /> {dislikescount} </Text>
           <Text  ml = "70%"> <Icon as={BsHeart}   /> {likescount} </Text>
