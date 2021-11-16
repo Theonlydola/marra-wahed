@@ -24,7 +24,7 @@ export default function About() {
             </VStack>
             
             
-            <Box w="20%" align="center">
+            <Box w="70%" align="center">
             <Divider orientation="horizontal" h="1px" mt="1em"/>
             
             <Text textAlign="justify" hyphens= "auto" color="grey" > Marra wahed is an arabic classic joke generator for all those out there who are in love with the egyptian dad jokes. Aren't we all? </Text>
