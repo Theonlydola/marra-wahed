@@ -1,8 +1,6 @@
-import { Box,HStack, VStack, Link, Image, Text, Icon,Table,Tr,Td, Thead, Divider,ChakraProvider} from '@chakra-ui/react';
+import { Box,HStack, VStack, Link, Image, Text, Icon, Divider,ChakraProvider} from '@chakra-ui/react';
 import photo from './photo.jpg'
 import { BsGithub,BsLinkedin,BsFacebook,BsTwitter,BsMailbox,BsInstagram} from "react-icons/bs";
-import {FaReact} from "react-icons/fa"
-import {  } from '@chakra-ui/react';
 export default function About() {
 
     return (
@@ -27,7 +25,7 @@ export default function About() {
             <Box w="70%" align="center">
             <Divider orientation="horizontal" h="1px" mt="1em"/>
             
-            <Text textAlign="justify" hyphens= "auto" color="grey" > Marra wahed is an arabic classic joke generator for all those out there who are in love with the egyptian dad jokes. Aren't we all? </Text>
+            <Text textAlign="justify"  hyphens= "auto" color="grey" > Marra wahed is an arabic classic joke generator for all those out there who are in love with the egyptian dad jokes. Aren't we all? </Text>
 
             <Divider orientation="horizontal" h="1px" mt="1em"/>
             

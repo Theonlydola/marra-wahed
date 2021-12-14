@@ -6,6 +6,7 @@ import connect from '../connection/connect';
 
 export default function Joke(props) {
   const [randomJoke, setrandomJoke] = useState('');
+  const [previousJokes, setpreviousJokes] = useState([]);
   const fetchJoke = async () => {
     try{
         console.log(props.nsfwflag);
@@ -15,7 +16,16 @@ export default function Joke(props) {
             fetchJoke();
         }
         console.log(response.joke);
-        setrandomJoke(response);
+        if (previousJokes.find(joke =>  joke._id == response._id)) {
+          console.log(response);
+          console.log("Caught Duplicate");
+          fetchJoke();
+        }
+        else{
+          setrandomJoke(response);
+          setpreviousJokes(previousJokes => [...previousJokes, response]);
+        }
+        
     }catch(err){
         console.log(err);
     }
